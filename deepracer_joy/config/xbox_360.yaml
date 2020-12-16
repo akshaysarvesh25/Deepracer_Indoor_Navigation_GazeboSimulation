@@ -1,0 +1,22 @@
+joy:
+  deadzone: 0.2
+
+teleop:
+  drive:
+    type: topic
+    message_type: ctrl_pkg/ServoCtrlMsg
+    topic_name: /manual_drive
+    deadman_buttons: [4]
+    axis_mappings:
+      - axis: 1
+        target: throttle
+        scale: 1.0
+      - axis: 3
+        target: angle
+        scale: 1.0
+  deadman:
+    type: service
+    service_name: /enable_state
+    service_request:
+      isActive: true
+    buttons: [4]
