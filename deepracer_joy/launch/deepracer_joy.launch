@@ -1,5 +1,5 @@
 <launch>
-  <arg name="joystick_device" default="/dev/input/js1" />
+  <arg name="joystick_device" default="/dev/input/js0" />
   <!-- ROS joystick interface -->
   <node name="joy" pkg="joy" type="joy_node">
     <param name="~dev" value="$(arg joystick_device)" />
