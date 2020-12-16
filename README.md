@@ -7,7 +7,7 @@ Indoor navigation of Deepracer in the Willow Garage world Gazebo environment con
 ## To run the simulation without Joystick </br>
 ```roslaunch deepracer_simulation racecar_indoorenvironment_nojoystick.launch```</br>
 
-##Dependencies
+## Dependencies
 1. To configure Joystick : https://github.com/athackst/deepracer_joy </br>
 2. Original Deepracer Repository : https://github.com/amazon-archives/aws-robomaker-sample-application-deepracer </br>
 3. The RPLidar sensor Gazebo mesh file (rplidar.dae), urdf/robot.xacro and urdf/robot.gazebo files from https://github.com/husarion/rosbot_description
