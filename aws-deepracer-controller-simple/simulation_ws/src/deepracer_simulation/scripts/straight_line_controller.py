@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import rospy
 import time
 from std_msgs.msg import Bool
@@ -60,69 +60,70 @@ def servo_commands():
     
     
     while not rospy.is_shutdown():
-    	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = 1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
-
-	msg.drive.speed = -1.0
-    	x_pub.publish(msg)
-	time.sleep(1)
+      msg.drive.speed = 1.0
+      x_pub.publish(msg)
+	
+    time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = 1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
+  
+  	msg.drive.speed = -1.0
+      	x_pub.publish(msg)
+  	time.sleep(1)
 
     rospy.Subscriber("/racecar/ackermann_cmd_mux/output", AckermannDriveStamped, set_throttle_steer)
 
