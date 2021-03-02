@@ -1,7 +1,15 @@
 <?xml version="1.0"?>
 <sdf version="1.4">
 <world name="empty_grid">
-
+  
+  <world>
+  <gui>
+    <camera name="user_camera">
+      <pose>-3 -9 26 0 1.57 0</pose>
+    </camera>
+  </gui>
+  </world>
+  
   <scene>
     <ambient>0.5 0.5 0.5 1.0</ambient>
     <shadows>0</shadows>
