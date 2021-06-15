@@ -1,45 +1,31 @@
-# deepracer_joy
+# Deepracer Manual Control Using Joystick
 
-This package will allow you to control your DeepRacer via joystick using ROS.
-
-## Quickstart
-
-Run the launch file
-
-```bash
-roslaunch deepracer_joy deepracer_joy.launch joystick_device=/dev/input/js0
+## Edit the ~/.bashrc
+```
+startros(){
+. /opt/ros/kinetic/setup.bash
+. /opt/aws/deepracer/setup.bash
+. /opt/aws/intel/dldt/bin/setupvars.sh
+export PYTHONPATH=/opt/aws/pyudev/pyudev-0.21.0/src:$PYTHONPATH
+}
 ```
 
-## Detailed directions
-
-### Find your joystick device name
-
-On linux:
-
-```bash
-cd /dev/input/
-ls
+## Dependency Packages -
 ```
-
-My device name is `/dev/input/js0`.  
-
-#### Test your input
-
-You can test your gamepad using jstest
-
-```bash
 sudo apt-get install jstest-gtk
-
-sudo jstest --normal /dev/input/js0
+sudo apt-get install ros-kinetic-joy
+sudo apt-get install ros-kinetic-joy-teleop 
 ```
 
-> Note: You may need to update the permissions of your device to read/write
-> `sudo chmod a+rw /dev/input/js0`
+## To run the DeepRacer with Joystick </br>
+```
+startros
+roslaunch deepracer_joy deepracer_joy.launch
+```
 
-### Configure your joystick
 
-I've included an example configuration file that I use with my wired Logitech gamepad.
+## References
+The original repository belongs to Allison Thackston.
+https://github.com/athackst/deepracer_joy </br>
 
-[logitech_dual_action.yaml](config/logitech_dual_action.yaml)
 
-For the DeepRacer you need to both enable the control mode with the `/enable_state` rosservice and you will need to publish your commands to `/manual_drive`.
