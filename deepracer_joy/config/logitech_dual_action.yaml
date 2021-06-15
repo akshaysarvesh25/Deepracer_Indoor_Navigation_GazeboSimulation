@@ -1,19 +1,14 @@
 teleop:
   drive:
     type: topic
-    message_type: ackermann_msgs/AckermannDriveStamped
-    topic_name: /vesc/low_level/ackermann_cmd_mux/output
-    #deadman_buttons: [4]
+    message_type: ctrl_pkg/ServoCtrlMsg
+    topic_name: /manual_drive
+    deadman_buttons: [2]
     axis_mappings:
       - axis: 1
-        target: drive.speed
+        target: throttle
         scale: 1.0
       - axis: 4
-        target: drive.steering_angle
+        target: angle
         scale: 1.0
-  #deadman:
-  #  type: service
-  #  service_name: /enable_state
-  #  service_request:
-  #    isActive: true
-  #  buttons: [4]
+ 
